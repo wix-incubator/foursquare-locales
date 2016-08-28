@@ -9,7 +9,7 @@ describe('FoursquareLocales', () => {
 			expect(FoursquareLocales.bestDomainFor('fr_FR')).to.equal('fr.foursquare.com')
 		})
 		
-		it ('falls back to United States', () => {
+		it ('falls back to English (United States)', () => {
 			expect(FoursquareLocales.bestDomainFor('xx_XX')).to.equal('foursquare.com')
 		})
 	})
