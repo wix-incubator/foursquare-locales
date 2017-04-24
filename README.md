@@ -14,6 +14,8 @@ FoursquareLocales.bestDomainFor('en_US'); //-> 'foursquare.com'
 FoursquareLocales.bestDomainFor("fr_FR"); //-> 'fr.foursquare.com'
 
 FoursquareLocales.bestPageUrlFor({locale: 'en_US', venueId:'1234'}); //-> 'https://foursquare.com/v/1234'
+
+FoursquareLocales.bestPageUrlFor({locale: 'en_US', venueId:'1234', tab:'menu'}); //-> 'https://foursquare.com/v/1234/menu'
 ```
 
 [downloads-image]: https://img.shields.io/npm/dm/foursquare-locales.svg
