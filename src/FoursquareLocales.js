@@ -13,12 +13,12 @@ export const bestDomainFor = (locale) => {
 	return Foursquare.languageDomains['en']
 }
 
-export const bestPageUrlFor = ({locale, venueId}) => {
+export const bestPageUrlFor = ({locale, venueId, tab}) => {
 	const language = locale.substr(0, 2)
 	const domain = Foursquare.languageDomains[language]
 	if (domain) {
-		return `https://${domain}/v/${venueId}`
+		return !tab ? `https://${domain}/v/${venueId}` : `https://${domain}/v/${venueId}/${tab}`
 	} else {
-		return `https://${Foursquare.languageDomains['en']}/v/${venueId}?locale=${language}`
+		return !tab ? `https://${Foursquare.languageDomains['en']}/v/${venueId}?locale=${language}` : `https://${Foursquare.languageDomains['en']}/v/${venueId}/${tab}?locale=${language}`
 	}
 }
